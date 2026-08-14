@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Mail,
-  Phone,
-  MapPin,
   Send,
-  Github,
-  Linkedin,
 } from "lucide-react";
 import { toast } from "react-toastify";
 
@@ -27,31 +23,6 @@ export default function Contact() {
       value: "23cs87@ksriet.ac.in",
       href: "mailto:23cs87@ksriet.ac.in",
     },
-    {
-      icon: <Phone className="w-5 h-5 text-purple-400" />,
-      label: "Phone",
-      value: "+91 6006863253",
-      href: "tel:+916006863253",
-    },
-    {
-      icon: <MapPin className="w-5 h-5 text-indigo-400" />,
-      label: "Location",
-      value: "Dardpora, Bandipora, Kashmir",
-      href: "https://maps.google.com/?q=Dardpora, Bandipora, Kashmir",
-    },
-  ];
-
-  const socialLinks = [
-    {
-      icon: <Github className="w-5 h-5" />,
-      href: "https://github.com/TanveerQurashi",
-      label: "GitHub",
-    },
-    {
-      icon: <Linkedin className="w-5 h-5" />,
-      href: "https://linkedin.com/in/tanveer-qurashi",
-      label: "LinkedIn",
-    },
   ];
 
   const handleInputChange = (e) => {
@@ -66,10 +37,8 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Get Web3Forms access key
     const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
-    // Check access key
     if (!accessKey) {
       toast.error("Web3Forms access key is missing.", {
         position: "bottom-right",
@@ -87,20 +56,16 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      // Get form data
       const form = e.target;
       const data = new FormData(form);
 
-      // Add Web3Forms access key
       data.append("access_key", accessKey);
 
-      // Add subject
       data.append(
         "subject",
         `Portfolio Contact - ${formData.name}`
       );
 
-      // Send form
       const response = await fetch(
         "https://api.web3forms.com/submit",
         {
@@ -123,7 +88,6 @@ export default function Contact() {
           }
         );
 
-        // Clear form
         setFormData({
           name: "",
           email: "",
@@ -242,25 +206,6 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* Social Links */}
-            <div className="flex gap-4 items-center justify-start text-left">
-              <span className="text-xs text-slate-500 font-mono tracking-wider uppercase">
-                Find me on:
-              </span>
-
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={social.label}
-                  className="p-2.5 rounded-xl bg-slate-900 border border-white/5 hover:border-blue-500/30 text-slate-400 hover:text-blue-400 transition-all hover:scale-105 shadow-md shadow-black/30"
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
           </motion.div>
 
           {/* Right Column - Contact Form */}
