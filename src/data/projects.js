@@ -4,8 +4,8 @@ export const projectsData = [
     title: "Retail-Ledger",
     description: "RetailLedger is a modern retail management system built with Next.js for managing products, customers, purchases, credit transactions, and payment records. It helps small retail businesses efficiently track customer dues and maintain organized transaction records.",
     tech: ["React","Tailwind CSS", "next.js", "MongoDB"],
-    github: "https://github.com/TanveerQurashi/agentic-portfolio-manager",
-    demo: "https://github.com/tanveerqurashi/kiraanamart-App.git",
+    github: "https://github.com/tanveerqurashi/kiraanamart-App.git",
+    demo: "demo",
     gradient: "from-blue-600 to-cyan-500",
     shadowColor: "rgba(59, 130, 246, 0.4)"
   },
