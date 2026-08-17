@@ -1,11 +1,11 @@
 export const projectsData = [
   {
     id: 1,
-    title: "Agentic AI Portfolio Management",
-    description: "An intelligent autonomous portfolio management system utilizing Multi-Agent LLM architecture to analyze stock sentiment, historical technicals, and run automated risk-adjusted asset allocation.",
-    tech: ["React", "FastAPI", "Python", "LangChain", "OpenAI", "Tailwind CSS"],
+    title: "Retail-Ledger",
+    description: "RetailLedger is a modern retail management system built with Next.js for managing products, customers, purchases, credit transactions, and payment records. It helps small retail businesses efficiently track customer dues and maintain organized transaction records.",
+    tech: ["React","Tailwind CSS", "next.js", "MongoDB"],
     github: "https://github.com/TanveerQurashi/agentic-portfolio-manager",
-    demo: "https://agentic-portfolio.demo",
+    demo: "https://github.com/tanveerqurashi/kiraanamart-App.git",
     gradient: "from-blue-600 to-cyan-500",
     shadowColor: "rgba(59, 130, 246, 0.4)"
   },
