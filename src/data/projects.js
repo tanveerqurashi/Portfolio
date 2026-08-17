@@ -31,11 +31,11 @@ export const projectsData = [
   },
   {
     id: 4,
-    title: "Spotify Clone",
-    description: "A sleek, responsive audio streaming web app featuring custom audio player controller, playlist creations, library search functionality, and interactive state management.",
-    tech: ["React", "Context API", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
-    github: "https://github.com/TanveerQurashi/spotify-clone",
-    demo: "https://spotify-clone.demo",
+    title: "Password Manager",
+    description: "A secure password manager web application that stores password in local storage and keeps them safe.",
+    tech: ["React", "Tailwind CSS", "JavaScript", "Local Storage"],
+    github: "https://github.com/tanveerqurashi/Password-Manager.git",
+    demo: "https://incomparable-buttercream-3a398b.netlify.app/",
     gradient: "from-emerald-500 to-green-600",
     shadowColor: "rgba(16, 185, 129, 0.4)"
   },
